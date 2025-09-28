@@ -1,0 +1,6 @@
+{
+  "resource_folder": "./res",
+  "widget": true,
+  "name": "RSplitLayout",
+  "id_file": "./src/widget/R.ts"
+}

@@ -1,0 +1,49 @@
+{
+  "name": "@casperui/split-layout",
+  "version": "0.0.1",
+  "scripts": {
+    "resources": "resmaker",
+    "build": "resmaker && tsc && tsc-alias && npx gen-exports dist -p package.json",
+    "release_pack": "npm run build && npm pack"
+  },
+  "files": [
+    "dist/**/*",
+    "res/**/*",
+    "resconfig.json",
+    "*.map"
+  ],
+  "exports": {
+    "./bind": {
+      "import": "./dist/bind.js",
+      "require": "./dist/bind.js",
+      "types": "./dist/bind.d.ts"
+    },
+    "./R": {
+      "import": "./dist/R.js",
+      "require": "./dist/R.js",
+      "types": "./dist/R.d.ts"
+    },
+    "./widget/SplitLayout": {
+      "import": "./dist/widget/SplitLayout.js",
+      "require": "./dist/widget/SplitLayout.js",
+      "types": "./dist/widget/SplitLayout.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/*"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@casperui/core": ">=0.0.8 <1.0.0"
+  },
+  "devDependencies": {
+    "tsc-alias": "^1.8.10",
+    "tsc-esm-fix": "^3.1.2",
+    "gen-exports": "^1.1.2",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {}
+}

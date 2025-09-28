@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",              // ESM
+    "target": "ESNext",              // или ES2020+
+    "moduleResolution": "bundler",
+    "outDir": "./dist",
+    "declaration": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "rootDir": "./src",
+    "esModuleInterop": true,
+    "paths": {
+//      "@casperui/core/*": ["dev/core/src/*"],
+      "@casperui/split-layout/*": ["src/*"]
+    },
+    "lib": [
+      "es6",
+      "es2021.weakref",
+      "dom"
+    ]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules","dist"]
+}
