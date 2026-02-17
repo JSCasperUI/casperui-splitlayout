@@ -37,8 +37,6 @@ export abstract class SplitLayout extends JFragment {
         super.onCreated();
         if (this.options.children) {
             this.setupContainer();
-        } else if (this.options.type === SplitType.CONTENT) {
-            this.setupContentArea();
         }
     }
 
@@ -49,11 +47,6 @@ export abstract class SplitLayout extends JFragment {
     setContentFragment(fragment: JFragment) {
         this.contentFragment = fragment;
         this.getFragmentManager().replaceFragment(555, this.contentFragment, this.rootElement)
-    }
-
-    private setupContentArea() {
-        this.rootElement.addClass(main_class);
-
     }
 
     abstract createInstance(context: Context, options: SplitLayoutOptions): SplitLayout;

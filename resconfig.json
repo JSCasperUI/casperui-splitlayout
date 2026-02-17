@@ -1,6 +1,12 @@
 {
-  "resource_folder": "./res",
-  "widget": true,
-  "name": "RSplitLayout",
-  "id_file": "./src/widget/R.ts"
+  "resourceDir": "./res",
+  "widget": {
+    "name": "RSplitLayout",
+    "id": "./dist/widget/R.js"
+  },
+  "output": {
+    "id": "./src/widget/R.ts"
+  }
 }
+
+

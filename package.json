@@ -4,7 +4,7 @@
   "scripts": {
     "resources": "resmaker",
     "build": "resmaker && tsc && tsc-alias && npx gen-exports dist -p package.json",
-    "release_pack": "npm run build && npm pack"
+    "release": "npm run build && npm pack"
   },
   "files": [
     "dist/**/*",
@@ -22,6 +22,16 @@
       "import": "./dist/R.js",
       "require": "./dist/R.js",
       "types": "./dist/R.d.ts"
+    },
+    "./widget/bind": {
+      "import": "./dist/widget/bind.js",
+      "require": "./dist/widget/bind.js",
+      "types": "./dist/widget/bind.d.ts"
+    },
+    "./widget/R": {
+      "import": "./dist/widget/R.js",
+      "require": "./dist/widget/R.js",
+      "types": "./dist/widget/R.d.ts"
     },
     "./widget/SplitLayout": {
       "import": "./dist/widget/SplitLayout.js",
