@@ -50,6 +50,7 @@
     "@casperui/core": ">=0.0.8 <1.0.0"
   },
   "devDependencies": {
+    "@casperui/core": "0.0.16",
     "tsc-alias": "^1.8.10",
     "tsc-esm-fix": "^3.1.2",
     "gen-exports": "^1.1.2",
